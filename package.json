@@ -1,0 +1,25 @@
+{
+  "name": "fakestorecart",
+  "version": "1.0.0",
+  "description": "Teste de Integração com FakeStore API para CRP Mango",
+  "email": "lucsa.dev@gmail.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "dev": "nodemon --watch src -e ts --exec ts-node src/index.ts",
+    "start": "node dist/index.js"
+  },
+  "author": "Lucas dos Santos Almeida",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.14.1",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
