@@ -23,7 +23,8 @@ const swaggerOptions = {
 const swaggerSpec = swaggerJsdoc(swaggerOptions);
 
 app.use('/add-three-products-to-cart', appController);
-app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+app.use(swaggerUi.serve);
+app.get('/docs', swaggerUi.setup(swaggerSpec));
 
 
 export default app;
