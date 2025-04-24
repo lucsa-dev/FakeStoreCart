@@ -18,7 +18,9 @@ const swaggerOptions = {
     },
     servers: [{ url: '/' }],
   },
-  apis: ['./src/**/*.ts'],
+  apis: process.env.NODE_ENV === 'production'
+    ? ['./dist/**/*.js']
+    : ['./src/**/*.ts'],
 };
 const swaggerSpec = swaggerJsdoc(swaggerOptions);
 
