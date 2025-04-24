@@ -16,7 +16,7 @@ const swaggerOptions = {
       version: '1.0.0',
       description: 'Documentação da API FakeStoreCart',
     },
-    servers: [{ url: 'http://localhost:3000' }],
+    servers: [{ url: '/' }],
   },
   apis: ['./src/**/*.ts'],
 };
