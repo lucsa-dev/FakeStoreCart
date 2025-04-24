@@ -1,13 +1,11 @@
 import express from 'express';
-import productRouter from './product/product.controller';
-import cartRouter from './cart/cart.controller';
+import appController from './app.controller';
 
 const app = express();
 
 app.use(express.json());
 
-app.use('/product', productRouter);
-app.use('/cart', cartRouter);
+app.use('/add-three-products-to-cart', appController);
 
 export default app;
 
