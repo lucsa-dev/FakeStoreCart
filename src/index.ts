@@ -23,7 +23,8 @@ const swaggerOptions = {
 const swaggerSpec = swaggerJsdoc(swaggerOptions);
 
 app.use('/add-three-products-to-cart', appController);
-app.use(swaggerUi.serve);
+// Servir interface e assets do Swagger em '/docs'
+app.use('/docs', swaggerUi.serve);
 app.get('/docs', swaggerUi.setup(swaggerSpec));
 
 
