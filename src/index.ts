@@ -9,8 +9,11 @@ app.use(express.json());
 app.use('/product', productRouter);
 app.use('/cart', cartRouter);
 
-const PORT = 3000;
+export default app;
 
-app.listen(PORT, () => {
-  console.log(`Servidor rodando na porta ${PORT}`);
-});
+if (require.main === module) {
+  const PORT = 3000;
+  app.listen(PORT, () => {
+    console.log(`Servidor rodando na porta ${PORT}`);
+  });
+}

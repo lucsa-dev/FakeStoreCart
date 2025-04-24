@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+    "lib": ["ES2019", "DOM"],
+    "types": ["node", "jest"],
     "target": "ES2019",
     "module": "commonjs",
     "rootDir": "src",
