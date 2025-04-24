@@ -2,7 +2,15 @@
 
 # FakeStoreCart
 
-Desenvolvido por Lucas dos Santos Almeida para teste de integração com a FakeStore API.
+Explicação do fluxo:
+- no index.js o controller app.controller.ts é cadastrado ao app contendo a rota '/add-three-products-to-cart' 
+- A rota POST faz uma chamada ao método 'getProducts' do serviço 'products' buscando 3 produtos da API
+- O carrinho é montado na variável cartItem junto com os produtos
+- O método addCart do serviço cart.service é chamado enviando os dados do carrinho para a API
+- a resposta é converdida em json e retornada
+- Caso haja algum erro é retornado status 500 com a mensagem 'Serviço Indisponível' 
+
+
 
 ## Tecnologias Utilizadas
 
@@ -39,3 +47,13 @@ npm start
 ```bash
 npm run test
 ``` 
+## Documentação Swagger 
+
+
+- Acesse a rota https://fake-store-cart-flame.vercel.app/docs/
+- click na aba POST / add_three_products_to_cart
+- Click no botão 'Try it out'
+- Aparecerá um botão 'Execute' click para executar e testar a requisição
+- Visualize o status na coluna 'Code' e o resultado na coluna 	'Response body'
+
+
