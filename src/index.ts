@@ -24,8 +24,8 @@ const swaggerSpec = swaggerJsdoc(swaggerOptions);
 
 app.use('/add-three-products-to-cart', appController);
 // Servir interface e assets do Swagger em '/docs'
-app.use('/docs', swaggerUi.serve);
-app.get('/docs', swaggerUi.setup(swaggerSpec));
+app.use('/', swaggerUi.serve);
+app.get('/', swaggerUi.setup(swaggerSpec));
 
 
 export default app;
