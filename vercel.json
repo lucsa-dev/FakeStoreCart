@@ -8,23 +8,23 @@
     ],
     "routes": [
       {
-        "src": "/docs/swagger-ui.css",
+        "src": "/swagger-ui.css",
         "dest": "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.15.5/swagger-ui.min.css"
       },
       {
-        "src": "/docs/swagger-ui-bundle.js",
+        "src": "/swagger-ui-bundle.js",
         "dest": "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.15.5/swagger-ui-bundle.min.js"
       },
       {
-        "src": "/docs/swagger-ui-standalone-preset.js",
+        "src": "/swagger-ui-standalone-preset.js",
         "dest": "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.15.5/swagger-ui-standalone-preset.min.js"
       },
       {
-        "src": "/docs/swagger-ui-init.js",
+        "src": "/swagger-ui-init.js",
         "dest": "dist/index.js"
       },
       {
-        "src": "/docs(.*)", 
+        "src": "/(.*)", 
         "dest": "dist/index.js"
       },
       {
