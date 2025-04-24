@@ -1,22 +1,11 @@
 import { Product } from './product.interface';
 
-const products: Product[] = [
-  {
-    id: 1,
-    title: 'Produto 1',
-    price: 10.99,
-    description: 'Descrição do Produto 1',
-    category: 'Categoria 1',
-    image: 'https://via.placeholder.com/150'
-  },
-  {
-    id: 2,
-    title: 'Produto 2',
-    price: 20.5,
-    description: 'Descrição do Produto 2',
-    category: 'Categoria 2',
-    image: 'https://via.placeholder.com/150'
+export const getProducts = async (limit?: number): Promise<Product[]> => {
+  const response = await fetch('https://fakestoreapi.com/products');
+  const products: Product[] = await response.json();
+  products.sort((a, b) => a.id - b.id);
+  if (limit && limit > 0) {
+    return products.slice(0, limit);
   }
-];
-
-export const getProducts = (): Product[] => products;
+  return products;
+};
