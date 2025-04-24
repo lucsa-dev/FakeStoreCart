@@ -22,7 +22,7 @@ describe('GET /add-three-products-to-cart', () => {
     const cartItem: CartItem = { id: 11, userId: 1, products };
     mockedAddToCart.mockResolvedValue(cartItem);
 
-    const response = await request(app).get('/add-three-products-to-cart');
+    const response = await request(app).post('/add-three-products-to-cart');
 
     expect(response.status).toBe(200);
     expect(response.body).toEqual(cartItem);
@@ -33,7 +33,7 @@ describe('GET /add-three-products-to-cart', () => {
   it('deve retornar 500 em caso de erro no serviço', async () => {
     mockedGetProducts.mockRejectedValue(new Error('fail'));
 
-    const response = await request(app).get('/add-three-products-to-cart');
+    const response = await request(app).post('/add-three-products-to-cart');
 
     expect(response.status).toBe(500);
     expect(response.body).toHaveProperty('error', 'Serviço Indisponível');
